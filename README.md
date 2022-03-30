@@ -1,7 +1,7 @@
 # HosTeller
 
 
-This project was created with the objective of helping to manage various activities in a hostel. 
+This project was created with the objective of helping manage various activities in a hostel. 
 
 The user will be provided with two login options: Admin and Student. 
 The admin login will be provided access to insert, search and delete records. 
