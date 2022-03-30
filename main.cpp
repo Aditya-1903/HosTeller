@@ -101,49 +101,6 @@ public:
     void read();
 };
 
-void BTree::read() {
-    fstream fin;
-
-    fin.open("Hostel Records.csv", ios::in);
-
-    string name, mobile, room, roll;
-    string temp;
-
-    getline(fin, temp);
-
-    while(getline(fin, room, ',')) {
-        getline(fin, mobile, ',');
-        getline(fin, roll, ',');
-        getline(fin, name);
-        insert(name, roll, mobile, room);
-    }
-    fin.close();
-}
-
-void BTree::write()
-{
-    if (root != NULL) {
-        root->write();
-    }
-}
-
-void BTreeNode::write() {
-
-    fout.open("Hostel Records.csv", ios::out);
-    fout << "NAME, ROLL NUMBER, MOBILE, ROOM NUMBER\n";
-
-    int i;
-    for (i = 0; i < n; i++)
-    {
-        if (leaf == false)
-            C[i]->write();
-        fout << Tree[i].name << "," << Tree[i].rollNo << "," << Tree[i].mobileNo << "," << Tree[i].roomNo << "\n";
-    }
-    if (leaf == false)
-        C[i]->write();
-    fout.close();
-}
-
 // A constructor for B-Tree Node class
 BTreeNode::BTreeNode(int t1, bool leaf1)
 {
@@ -703,7 +660,7 @@ int main()
                             cin >> room;
 
                             t.insert(name, roll, mobile, room);
-                            t.write();
+                            
 
                     }
 
@@ -737,7 +694,7 @@ int main()
                             cin >> room;
 
                             t.remove(room);
-                            t.write();
+                           
                     }
 
                     if(c3 == 4){
