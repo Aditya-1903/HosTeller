@@ -12,5 +12,5 @@ B Tree data structure was used for insertion, search and deletion.
 B Tree is a special type of self-balancing search tree in which each node can contain more than one key and can have more than two children. 
 It allows insert, search and update in a faster and memory efficient way. 
 If we have to store a large number of keys, then the height of such trees becomes very large and the access time increases. 
-B Tree helps decreases the height significantly allowing faster disk access.
+B Tree helps decrease the height significantly allowing faster disk access.
 
